@@ -18,5 +18,5 @@ class Generator:
             'ingredients':self.ingredients,
             'params':self.params
         }
-        response=requests.post(url='http://backend/predict/',data=json.dumps(request))
+        response = requests.post(url='https://<your-public-backend-url>/predict/', data=json.dumps(request))
         return response
