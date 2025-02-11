@@ -4,7 +4,7 @@ services:
   frontend:
     build:
       context: .
-      dockerfile: Streamlit_Frontend/Dockerfile
+      dockerfile: Frontend/Dockerfile
     image: frontend:latest
     ports:
       - 8501:8501
@@ -13,13 +13,13 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./Streamlit_Frontend:/app/backend
+      - ./Frontend:/app/backend
 
 
   backend:
     build:
       context: .
-      dockerfile: FastAPI_Backend/Dockerfile
+      dockerfile: Backend/Dockerfile
     image: backend:latest
     ports:
       - 8080:8080
