@@ -4,10 +4,10 @@ FROM python:3.10.8
 
 RUN mkdir -p app/backend
 
-COPY FastAPI_Backend/requirements.txt app/backend/requirements.txt
+COPY Backend/requirements.txt app/backend/requirements.txt
 COPY Data app/Data
 
-COPY FastAPI_Backend app/backend
+COPY Backend app/backend
 
 WORKDIR /app/backend
 
